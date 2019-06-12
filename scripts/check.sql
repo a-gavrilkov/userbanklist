@@ -1,0 +1,1 @@
+SELECT name, sureName, account FROM user, account WHERE user.userid = account.userid;
