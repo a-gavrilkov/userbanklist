@@ -1,4 +1,4 @@
-package service;
+package com.example.userbanklist.service;
 
 import java.sql.SQLException;
 

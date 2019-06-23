@@ -1,27 +1,38 @@
-package entity;
+package com.example.userbanklist.entity;
 
+import javax.persistence.*;
 import java.util.Objects;
 
-public class Account {
-    private Long accountId;
+@Entity
+@Table(name = "account")
+public class Account extends AbstractEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "accountid")
+    private Long id;
+
+    @Column(name = "account")
     private Long account;
+
+    @Column(name = "userid")
     private Long userId;
 
     public Account() {
     }
 
-    public Account(Long accountId, Long account, Long userId) {
-        this.accountId = accountId;
+    public Account(Long id, Long account, Long userId) {
+        this.id = id;
         this.account = account;
         this.userId = userId;
     }
 
-    public Long getAccountId() {
-        return accountId;
+    public Long getId() {
+        return id;
     }
 
-    public void setAccountId(Long accountId) {
-        this.accountId = accountId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Long getAccount() {
@@ -45,13 +56,13 @@ public class Account {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Account account1 = (Account) o;
-        return Objects.equals(accountId, account1.accountId) &&
+        return Objects.equals(id, account1.id) &&
                 Objects.equals(account, account1.account) &&
                 Objects.equals(userId, account1.userId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(accountId, account, userId);
+        return Objects.hash(id, account, userId);
     }
 }

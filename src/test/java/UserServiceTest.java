@@ -1,14 +1,14 @@
-import dao.fakeImpl.AccountDaoFakeImpl;
-import dao.fakeImpl.UserDaoFakeImpl;
-import entity.Account;
-import entity.User;
-import exception.UserNotFoundException;
+import com.example.userbanklist.dao.fakeImpl.AccountDaoFakeImpl;
+import com.example.userbanklist.dao.fakeImpl.UserDaoFakeImpl;
+import com.example.userbanklist.entity.Account;
+import com.example.userbanklist.entity.User;
+import com.example.userbanklist.exception.UserNotFoundException;
+import com.example.userbanklist.service.UserService;
+import com.example.userbanklist.service.impl.UserServiceImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import service.UserService;
-import service.impl.UserServiceImpl;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

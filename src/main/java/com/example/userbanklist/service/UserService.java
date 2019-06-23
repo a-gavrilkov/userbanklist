@@ -1,6 +1,6 @@
-package service;
+package com.example.userbanklist.service;
 
-import entity.User;
+import com.example.userbanklist.entity.User;
 
 import java.sql.SQLException;
 

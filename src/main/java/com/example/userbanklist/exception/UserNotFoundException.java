@@ -1,4 +1,4 @@
-package exception;
+package com.example.userbanklist.exception;
 
 public class UserNotFoundException extends RuntimeException {
     public UserNotFoundException() {
